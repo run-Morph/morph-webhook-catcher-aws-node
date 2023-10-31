@@ -1,4 +1,4 @@
-# Morph Webhook Catcher (AWS Lamnda – NodeJS)
+## Morph Webhook Catcher (AWS Lambda - Node.js)
 
 This project deploys an AWS Lambda function through an API Gateway to receive webhook events `card_view.requested` from Morph and generate a Card View response.
 
