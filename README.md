@@ -16,8 +16,8 @@ Make sure to [configure your AWS CLI](https://docs.aws.amazon.com/cli/latest/use
 
 1. Clone this repository and navigate into it:
     ```bash
-    git clone https://github.com/your-username/webhook_lambda.git
-    cd morph-webhook-catcher
+    git clone https://github.com/run-Morph/morph-webhook-catcher-aws-node.git
+    cd morph-webhook-catcher-aws-node
     ```
 
 2. Install the dependencies:
