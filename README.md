@@ -113,6 +113,14 @@ If you check the request again using the Morph REST API `GET /requests/:request_
 }
 ```
 
+## Testing Locally on HubSpot
+
+1. Follow the instructions in [this guide](https://www.runmorph.dev/hubspot-sandbox) to set up your Morph Sandbox app in HubSpot.
+2. Ensure that you set the card's `Data fetch URL` to `https://api.runmorph.dev/v0/request-hooks/YOUR_REQUEST_HOOK_ID/hubspot`.
+3. Create a webhook subscription to your ngrok URL using the [`POST /webhooks`](https://www.runmorph.dev/api-reference/webhooks#create-a-webhook)  endpoint .
+4. Open a Contact page in HubSpot and observe the appearance of your locally crafted card 🌽 
+
+
 ## Deploying to AWS
 
 1. Package the application. This command will create a deployment package and save it in an S3 bucket:
