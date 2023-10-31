@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: An AWS Serverless Application that receives webhooks
+Resources:
+  WebHookFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: s3://morph-demo-repo/90e94275c47db8d8ede5f68eb3abecc7
+      Handler: src/app.handler
+      Runtime: nodejs14.x
+      Environment:
+        Variables:
+          API_KEY: cid-6a76-8cbf-1fb8-7dd32cc76d
+          API_SECRET: skt-cbd5-b51b-8312-7f6768c37f
+      Events:
+        WebHook:
+          Type: Api
+          Properties:
+            Path: /morph-webhook-catcher
+            Method: post
+    Metadata:
+      SamResourceId: WebHookFunction

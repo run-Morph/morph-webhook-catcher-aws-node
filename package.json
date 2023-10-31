@@ -1,0 +1,18 @@
+{
+  "name": "morph-webhook-catcher-aws-node",
+  "version": "0.0.1",
+  "description": "AWS Lambda project to capture Morph's `card_view.requested` events and generate a response for the card view.",
+  "main": "src/app.js",
+  "scripts": {
+    "start-api": "sam local start-api",
+    "start-ngrok": "ngrok http 3000",
+    "test": "npm run start-api & npm run start-ngrok",
+    "package": "sam package --s3-bucket morph-demo-repo --output-template-file packaged.yaml --debug",
+    "deploy": "sam deploy --template-file packaged.yaml --stack-name webhook-lambda-stack --capabilities CAPABILITY_IAM"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.799.0",
+    "dotenv": "^16.3.1",
+    "run-morph-client": "^1.0.7"
+  }
+}
